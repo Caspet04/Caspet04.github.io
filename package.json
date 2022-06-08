@@ -29,6 +29,8 @@
 	"type": "module",
 	"dependencies": {
 		"@mapbox/node-pre-gyp": "^1.0.9",
-		"daisyui": "^2.15.2"
+		"canvas": "^2.9.1",
+		"daisyui": "^2.15.2",
+		"konva": "^8.3.9"
 	}
 }
