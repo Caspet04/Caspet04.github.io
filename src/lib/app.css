@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* This is for compatability between tailwind and dygraph */
+.dygraph-legend {
+    /* position: absolute; */
+    padding-left: 75px;
+}

@@ -2,8 +2,8 @@
 	import '$lib/app.css';
 </script>
 
-<main>
-	<div class="navbar bg-base-300">
+<main class="flex flex-col h-screen">
+	<div class="navbar flex bg-base-300">
 		<div class="navbar-start">
 			<div class="dropdown lg:hidden">
 				<label tabindex="0" for="my-drawer-3" class="btn btn-ghost btn-circle">
@@ -46,8 +46,7 @@
 			</a>
 		</div>
 	</div>
-
-	<div class="bg-base-100">
+	<div class="bg-base-100 flex-1">
 		<slot />
 	</div>
 </main>
