@@ -1,7 +1,7 @@
 <script lang="ts">
 	import Konva from 'Konva';
 	import { onMount, onDestroy } from 'svelte';
-	import Simulation, { SimulationConfig } from '$lib/ts/simulation';
+	import Simulation, { SimulationConfig } from '$lib/ts/evolution/simulation';
 	import type Graph from '$lib/ts/graph';
 	import SimulationConfigList from '$lib/components/SimulationConfigList.svelte';
 

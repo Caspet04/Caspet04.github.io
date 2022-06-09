@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { SimulationConfig } from '$lib/ts/simulation';
+	import { SimulationConfig } from '$lib/ts/evolution/simulation';
 
 	export let id: string;
 	export let config: SimulationConfig = new SimulationConfig();
