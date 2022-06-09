@@ -267,12 +267,3 @@
 		<SimulationConfigList id="settings-modal" bind:config />
 	</div>
 </div>
-
-<style>
-	#graph-grid {
-		width: 90%;
-		display: grid;
-		gap: 10px;
-		grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
-	}
-</style>
