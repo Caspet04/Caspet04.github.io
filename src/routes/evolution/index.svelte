@@ -30,7 +30,7 @@
 
 		stage = new Konva.Stage({
 			container: stageContainer,
-			width: 400,
+			width: 800,
 			height: 400
 		});
 		simulation = new Simulation(stage, config);
@@ -136,11 +136,129 @@
 			>
 			<label for="settings-modal" class="btn modal-button">Settings</label>
 		</div>
-		<div>
-			<div bind:this={foodAgentNumberGraphElement} />
-			<div bind:this={agentStatSightGraphElement} />
-			<div bind:this={agentStatSpeedGraphElement} />
-			<div bind:this={agentStatReproduceGraphElement} />
+		<div class="flex flex-row overflow-x-scroll w-4/5 box-border m-10 border">
+			<div>
+				<div bind:this={foodAgentNumberGraphElement} />
+				<label>
+					Food:
+					<input
+						type="checkbox"
+						checked
+						on:click={() => {
+							foodAgentNumberGraph.toggleVisibility(0);
+						}}
+					/>
+				</label>
+				<label>
+					Agent:
+					<input
+						type="checkbox"
+						checked
+						on:click={() => {
+							foodAgentNumberGraph.toggleVisibility(1);
+						}}
+					/>
+				</label>
+			</div>
+			<div>
+				<div bind:this={agentStatSightGraphElement} />
+				<label>
+					Min Sight:
+					<input
+						type="checkbox"
+						checked
+						on:click={() => {
+							agentStatSightGraph.toggleVisibility(0);
+						}}
+					/>
+				</label>
+				<label>
+					Average Sight:
+					<input
+						type="checkbox"
+						checked
+						on:click={() => {
+							agentStatSightGraph.toggleVisibility(1);
+						}}
+					/>
+				</label>
+				<label>
+					Max Sight:
+					<input
+						type="checkbox"
+						checked
+						on:click={() => {
+							agentStatSightGraph.toggleVisibility(2);
+						}}
+					/>
+				</label>
+			</div>
+			<div>
+				<div bind:this={agentStatSpeedGraphElement} />
+				<label>
+					Min Speed:
+					<input
+						type="checkbox"
+						checked
+						on:click={() => {
+							agentStatSpeedGraph.toggleVisibility(0);
+						}}
+					/>
+				</label>
+				<label>
+					Average Speed:
+					<input
+						type="checkbox"
+						checked
+						on:click={() => {
+							agentStatSpeedGraph.toggleVisibility(1);
+						}}
+					/>
+				</label>
+				<label>
+					Max Speed:
+					<input
+						type="checkbox"
+						checked
+						on:click={() => {
+							agentStatSpeedGraph.toggleVisibility(2);
+						}}
+					/>
+				</label>
+			</div>
+			<div>
+				<div bind:this={agentStatReproduceGraphElement} />
+				<label>
+					Min Reproduce:
+					<input
+						type="checkbox"
+						checked
+						on:click={() => {
+							agentStatReproduceGraph.toggleVisibility(0);
+						}}
+					/>
+				</label>
+				<label>
+					Average Reproduce:
+					<input
+						type="checkbox"
+						checked
+						on:click={() => {
+							agentStatReproduceGraph.toggleVisibility(1);
+						}}
+					/>
+				</label>
+				<label>
+					Max Reproduce:
+					<input
+						type="checkbox"
+						checked
+						on:click={() => {
+							agentStatReproduceGraph.toggleVisibility(2);
+						}}
+					/>
+				</label>
+			</div>
 		</div>
 		<div>
 			UPS: {ups}
@@ -149,3 +267,12 @@
 		<SimulationConfigList id="settings-modal" bind:config />
 	</div>
 </div>
+
+<style>
+	#graph-grid {
+		width: 90%;
+		display: grid;
+		gap: 10px;
+		grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+	}
+</style>

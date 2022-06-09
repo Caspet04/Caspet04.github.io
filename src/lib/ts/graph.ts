@@ -5,6 +5,7 @@ export default class Graph {
 	private dygraph: Dygraph;
 	private data: number[][];
 	private resetData: number[][];
+	private visible: boolean[] = [];
 
 	constructor(container: HTMLDivElement, labels: string[]) {
 		this.labels = labels;
@@ -12,6 +13,7 @@ export default class Graph {
 		let _temp: number[] = [];
 		for (let i = 0; i < labels.length; i++) {
 			_temp.push(0);
+			this.visible.push(true);
 		}
 		this.resetData = [_temp];
 		this.dygraph = new Dygraph(container, this.resetData, { labels });
@@ -33,5 +35,10 @@ export default class Graph {
 	reset() {
 		this.data = [];
 		this.dygraph.updateOptions({ file: this.resetData });
+	}
+
+	toggleVisibility(id: number) {
+		this.dygraph.setVisibility(id, !this.visible[id]);
+		this.visible[id] = !this.visible[id];
 	}
 }
