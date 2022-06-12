@@ -8,12 +8,6 @@ import {
 } from '$lib/ts/utility';
 import type { Position } from '$lib/ts/types';
 
-// TODO: Make it so that after a configurable number of ticks, a food is spawned
-// TODO: Make the amount of food spawned configurable
-// TODO: Make agents avoid highly populated areas, i.e. avoid other agents
-// TODO: Add an aversion stat that changes how many it can tolerate
-// TODO: Move as much of the agents and food classes into the simulation class and have agent and food be objects
-// TODO: Add highlighting of sight, speed and reproduce stats so that they are colored depending on their stat
 // TODO: Add energy visualizer
 
 export class SimulationConfig {
@@ -277,7 +271,6 @@ export default class Simulation {
 		}
 	}
 
-	// TODO: For some reason, the agents move faster when there are more of them
 	private update() {
 		let now = Date.now();
 
