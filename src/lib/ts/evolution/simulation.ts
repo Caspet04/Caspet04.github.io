@@ -87,14 +87,14 @@ export default class Simulation {
 
 	config: SimulationConfig;
 
-	private agents: Agent[] = []; // TODO: Create a getter for Simulation.numberOfAgents
+	private agents: Agent[] = [];
 	private foods: Food[] = [];
 	private agentLayer: Konva.Layer;
 	private foodLayer: Konva.Layer;
 	private stage: Konva.Stage;
 	private foodTimer: number;
 
-	private _running: boolean = false; // TODO: Create a getter for Simulation.running
+	private _running: boolean = false;
 	updateTime = new WritableValue(0);
 	get running() {
 		return this._running;
@@ -353,7 +353,7 @@ export default class Simulation {
 			// Destroy the agent if it is out of energy
 			if (agent.energy <= 0) {
 				this.agents.splice(i, 1);
-				i--;
+				i--; // Adjust `i` since the array is shifted after removing an element
 				agent.shape.destroy(); // Remove the shape so it's not rendered
 
 				continue;
@@ -395,7 +395,7 @@ export default class Simulation {
 			// to avoid an additional loop, Array.indexOf, and other searches
 			if (this.foods[i].eaten) {
 				this.foods.splice(i, 1)[0].shape.destroy();
-				i--;
+				i--; // Adjust `i` since the array is shifted after removing an element
 				redraw = true;
 				continue;
 			}
@@ -476,7 +476,6 @@ export default class Simulation {
 		return temp;
 	}
 
-	// TODO: Get color from the agents "genes"
 	private newAgent(position: Position, stats?: AgentStatObject): Agent {
 		let shape = new Konva.Circle({
 			...position,
