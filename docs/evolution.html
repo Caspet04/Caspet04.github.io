@@ -5,12 +5,12 @@
 		<link rel="icon" href="./favicon.png" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<meta http-equiv="content-security-policy" content="">
-	<link rel="stylesheet" href="/_app/immutable/assets/pages/__layout.svelte-a6f1f36e.css">
-	<link rel="modulepreload" href="/_app/immutable/start-50a025b0.js">
+	<link rel="stylesheet" href="/_app/immutable/assets/pages/__layout.svelte-8bce552f.css">
+	<link rel="modulepreload" href="/_app/immutable/start-a7f23a7a.js">
 	<link rel="modulepreload" href="/_app/immutable/chunks/index-a470c5c7.js">
 	<link rel="modulepreload" href="/_app/immutable/chunks/preload-helper-9d4a68c9.js">
-	<link rel="modulepreload" href="/_app/immutable/pages/__layout.svelte-5b37b33a.js">
-	<link rel="modulepreload" href="/_app/immutable/pages/evolution/index.svelte-427c1ed1.js">
+	<link rel="modulepreload" href="/_app/immutable/pages/__layout.svelte-4010b9c6.js">
+	<link rel="modulepreload" href="/_app/immutable/pages/evolution/index.svelte-dd3f4486.js">
 	</head>
 	<body>
 		<div>
@@ -27,10 +27,32 @@
 		<div class="menu menu-horizontal gap-2 p-2 hidden lg:block"><button class="btn btn-primary">Start</button>
 			<button class="btn btn-primary">Reset</button>
 			<label for="settings-modal" class="btn modal-button">Settings</label></div>
-		<div><div></div>
-			<div></div>
-			<div></div>
-			<div></div></div>
+		<div class="flex flex-row overflow-x-scroll w-4/5 box-border m-10 border"><div><div></div>
+				<label>Food:
+					<input type="checkbox" checked></label>
+				<label>Agent:
+					<input type="checkbox" checked></label></div>
+			<div><div></div>
+				<label>Min Sight:
+					<input type="checkbox" checked></label>
+				<label>Average Sight:
+					<input type="checkbox" checked></label>
+				<label>Max Sight:
+					<input type="checkbox" checked></label></div>
+			<div><div></div>
+				<label>Min Speed:
+					<input type="checkbox" checked></label>
+				<label>Average Speed:
+					<input type="checkbox" checked></label>
+				<label>Max Speed:
+					<input type="checkbox" checked></label></div>
+			<div><div></div>
+				<label>Min Reproduce:
+					<input type="checkbox" checked></label>
+				<label>Average Reproduce:
+					<input type="checkbox" checked></label>
+				<label>Max Reproduce:
+					<input type="checkbox" checked></label></div></div>
 		<div>UPS: 0
 			Update Time: 0</div>
 		<input type="checkbox" id="settings-modal" class="modal-toggle">
@@ -100,10 +122,10 @@
 				<div class="flex flex-shrink-0 flex-wrap items-center justify-end p-4 border-t border-gray-200 rounded-b-md"><label for="settings-modal" class="btn btn-primary">Save</label></div></div></div></div></div></div></div></div></main>
 
 
-		<script type="module" data-sveltekit-hydrate="ez7zbj">
-		import { start } from "/_app/immutable/start-50a025b0.js";
+		<script type="module" data-sveltekit-hydrate="i4h7qj">
+		import { start } from "/_app/immutable/start-a7f23a7a.js";
 		start({
-			target: document.querySelector('[data-sveltekit-hydrate="ez7zbj"]').parentNode,
+			target: document.querySelector('[data-sveltekit-hydrate="i4h7qj"]').parentNode,
 			paths: {"base":"","assets":""},
 			session: {},
 			route: true,
@@ -112,7 +134,7 @@
 			hydrate: {
 				status: 200,
 				error: null,
-				nodes: [0, 2],
+				nodes: [0, 3],
 				params: {},
 				routeId: "evolution"
 			}
